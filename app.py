@@ -1,4 +1,4 @@
-import streamlit as st.
+import streamlit as st
 
 # Load all models
 log_model = pickle.load(open('logistic_model.pkl', 'rb'))
