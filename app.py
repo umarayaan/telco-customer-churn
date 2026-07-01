@@ -1,11 +1,4 @@
-import pickle
-
-pickle.dump(lin_mod, open('logistic_model.pkl', 'wb'))
-pickle.dump(decis_tree, open('decision_tree_model.pkl', 'wb'))
-pickle.dump(svc_model, open('svm_model.pkl', 'wb'))
-pickle.dump(rand_forest, open('random_forest_model.pkl', 'wb'))
-import streamlit as st
-
+import streamlit as st.
 
 # Load all models
 log_model = pickle.load(open('logistic_model.pkl', 'rb'))
