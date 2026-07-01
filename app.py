@@ -1,10 +1,11 @@
 import streamlit as st
+import os
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-# Load all models
-log_model = pickle.load(open('logistic_model.pkl', 'rb'))
-dt_model = pickle.load(open('decision_tree_model.pkl', 'rb'))
-svm_model = pickle.load(open('svm_model.pkl', 'rb'))
-rf_model = pickle.load(open('random_forest_model.pkl', 'rb'))
+log_model = pickle.load(open(os.path.join(BASE_DIR, 'logistic_model.pkl'), 'rb'))
+dt_model = pickle.load(open(os.path.join(BASE_DIR, 'decision_tree_model.pkl'), 'rb'))
+svm_model = pickle.load(open(os.path.join(BASE_DIR, 'svm_model.pkl'), 'rb'))
+rf_model = pickle.load(open(os.path.join(BASE_DIR, 'random_forest_model.pkl'), 'rb'))
 
 st.title('Telco Customer Churn Predictor')
 st.write('Enter customer details below to predict churn risk')
